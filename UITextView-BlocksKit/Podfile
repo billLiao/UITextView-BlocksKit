@@ -1,0 +1,5 @@
+platform:ios, '8.0'
+
+target 'UITextView-BlocksKit' do
+    pod 'BlocksKit'
+end

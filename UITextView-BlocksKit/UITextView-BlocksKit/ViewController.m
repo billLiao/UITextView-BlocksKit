@@ -1,13 +1,22 @@
-# UITextView-BlocksKit
-一直都喜欢使用 BlocksKit，但是没有 UITextView 的拓展，为了自己的使用方便就写了一个 UITextView 的拓展。
+//
+//  ViewController.m
+//  UITextView-BlocksKit
+//
+//  Created by 廖坚 on 17/2/13.
+//  Copyright © 2017年 liaojian. All rights reserved.
+//
 
-# 使用方法
-需要导入 [BlocksKit](https://github.com/zwaldowski/BlocksKit) ,使用 ‘A2DynamicDelegate.h’ 和 ‘NSObject+A2BlockDelegate.h’ 实现的拓展。
+#import "ViewController.h"
+#import "UITextView+BlocksKit.h"
+@interface ViewController ()
 
-代码实现：
+@end
 
-```
+@implementation ViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
     UITextView *textView = [UITextView new];
     textView.frame = CGRectMake(100, 100, 200, 200);
     [self.view addSubview:textView];
@@ -45,4 +54,14 @@
     textView.bk_shouldInteractWithURLInRangeBlock = ^(UITextView *textView, NSURL *url, NSRange range){
         return YES;
     };
-```
+    
+}
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
+@end
